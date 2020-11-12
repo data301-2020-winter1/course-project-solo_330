@@ -1,7 +1,7 @@
 import pandas as pd
 #import altair as alt
-#import datetime
-#import time
+import datetime
+import time
 #import pdb
 import numpy as np
 #import matplotlib.pyplot as plt
@@ -21,24 +21,28 @@ def load_and_process(url_or_path_to_csv_file):
     if count_nan > 0:
         print("There are {} NaN values in the dataset.".format(count_nan))
     
-    df['winner'] = np.where(df['blueWins'] == 1, 'blue', 'red')
+    df['winner'] = np.where(df['blueWins'] == 1, 'blue', (np.where(df['gameDuraton'] > 250, 'red', 'remake')))
     df = blue_or_red(df, 'Blood')
     df = blue_or_red(df, 'Tower')
     df = blue_or_red(df, 'Baron')
     df = blue_or_red(df, 'Dragon')
     df = blue_or_red(df, 'Inhibitor')
+    df['gameLength'] = np.where(df['gameDuraton'] > 2400, 'long',
+                               (np.where(df['gameDuraton'] > 1200, 'medium', 'short')))
+    df['gameTime'] = df['gameDuraton'].apply(lambda x: time.strftime("%M:%S",time.gmtime(x)))
+    
     df = (df.drop(columns = ['blueWins', 
-                            'blueFirstBlood', 
-                            'blueFirstTower',
-                            'blueFirstBaron', 
-                            'blueFirstDragon', 
-                            'blueFirstInhibitor',
-                            'redWins', 
-                            'redFirstBlood', 
-                            'redFirstTower',
-                            'redFirstBaron', 
-                            'redFirstDragon', 
-                            'redFirstInhibitor'])
+                             'blueFirstBlood', 
+                             'blueFirstTower',
+                             'blueFirstBaron', 
+                             'blueFirstDragon', 
+                             'blueFirstInhibitor',
+                             'redWins', 
+                             'redFirstBlood', 
+                             'redFirstTower',
+                             'redFirstBaron', 
+                             'redFirstDragon', 
+                             'redFirstInhibitor'])
           .rename(columns = {"gameId":"gameID",
                              "gameDuraton":"gameDuration",
                              "blueWardPlaced":"blueWard",
@@ -58,9 +62,11 @@ def load_and_process(url_or_path_to_csv_file):
                              "redTotalHeal":"redTotalHealing",
                              "redObjectDamageDealt":"redObjectiveDamage",
                              "redTotalMinionKills":"redTotalCS",
-                             "redJungleMinionKills":"redJungleCS",})
+                             "redJungleMinionKills":"redJungleCS"})
          .reindex(columns = ['gameID', 
-                             'gameDuration', 
+                             'gameTime',
+                             'gameDuration',
+                             'gameLength',
                              'winner', 
                              'firstBlood', 
                              'firstTower', 
@@ -103,5 +109,7 @@ def load_and_process(url_or_path_to_csv_file):
                              'redTotalCS',
                              'redJungleCS', 
                              'redKillingSpree']))
+    
+    df = df[df.winner != 'remake']
 
     return df

@@ -33,7 +33,7 @@ The data is loaded using the load_and_process function from 'scripts/python_func
 ### Exploratory Data Analysis
 
 Found the total number of Korean Challenger games in the season split:
-    - 26,737 games
+    * 26,737 games
     
 Found the total number of wins per side depending on the game length:
     - This was to test whether any side wins significantly more games for a certain game length.

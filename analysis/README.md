@@ -32,20 +32,20 @@ The data is loaded using the load_and_process function from 'scripts/python_func
 
 ### Exploratory Data Analysis
 
-Found the total number of Korean Challenger games in the season split. 
+Found the total number of Korean Challenger games in the season split:
     - 26,737 games
     
-Found the total number of wins per side depending on the game length.
+Found the total number of wins per side depending on the game length:
     - This was to test whether any side wins significantly more games for a certain game length.
         - It seems game length does not significantly affect which side wins. 
     - These results were also graphed for visual interpretation.
         - The graph made clear that there is a significant difference between the number of short, medium, and long games.
 
-Calculated the average game length.
+Calculated the average game length:
     - 24 Minutes and 16 Seconds (lower end of medium)
     - This makes sense as a lot of games are forfeited at 15 minutes (see below point) and the estimated average time for a game of League of Legends is 30 minutes. 
 
-Plotted the distribution of game lengths. 
+Plotted the distribution of game lengths:
     - The plot follows a normal distribution, with one exception. 
     - At 15 minutes there is a huge spike in games; this is due to 15 minutes being when surrender (forfeit) votes are unlocked. 
         - When a team believes it cannot win the game, they will surrender at 15 minutes rather than play the game out. 

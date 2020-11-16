@@ -42,47 +42,47 @@ Found the total number of wins per side depending on the game length:
     * The graph made clear that there is a significant difference between the number of short, medium, and long games.  
 
 Calculated the average game length:  
-    * 24 Minutes and 16 Seconds (lower end of medium)  
-    * This makes sense as a lot of games are forfeited at 15 minutes (see below point) and the estimated average time for a game of League of Legends is 30 minutes.  
+  * 24 Minutes and 16 Seconds (lower end of medium)  
+  * This makes sense as a lot of games are forfeited at 15 minutes (see below point) and the estimated average time for a game of League of Legends is 30 minutes.  
 
 Plotted the distribution of game lengths:  
-    * The plot follows a normal distribution, with one exception.  
-    * At 15 minutes there is a huge spike in games; this is due to 15 minutes being when surrender (forfeit) votes are unlocked.  
-        * When a team believes it cannot win the game, they will surrender at 15 minutes rather than play the game out.  
-        * This saves time when trying to climb ranks and helps players from tilting.  
-        * It makes more sense to forfeit a likely lost game and spend those extra 10-15 minutes on a new game.  
-        * This result is consistent with the qualitative observations from Korean Challenger League of Legends.  
-        * Players on the Korean server are known to forfeit more games in comparison to regions like North America or Europe.  
+  * The plot follows a normal distribution, with one exception.  
+  * At 15 minutes there is a huge spike in games; this is due to 15 minutes being when surrender (forfeit) votes are unlocked.  
+    * When a team believes it cannot win the game, they will surrender at 15 minutes rather than play the game out.  
+    * This saves time when trying to climb ranks and helps players from tilting.  
+    * It makes more sense to forfeit a likely lost game and spend those extra 10-15 minutes on a new game.  
+    * This result is consistent with the qualitative observations from Korean Challenger League of Legends.  
+    * Players on the Korean server are known to forfeit more games in comparison to regions like North America or Europe.  
 
 Calculated the percent of games won after taking the first of a specific objective:  
-    * The following objectives (first blood, first tower, first dragon, first baron, first inhibitor) are crucial in determining who wins the game, as they are often linked with rewards that give the team that takes the objective an advantage.  
-        * For example, first blood and first tower grant an extra amount of gold, which when converted to items gives your team a power advantage, which can then be used to gain more kills and objectives.  
-    * In this analysis only first objectives were looked at, as objectives such as second dragons are much easier to obtain once you have secured the objective the first time around (term: snowballing).  
-    * It is often difficult to determine which objectives one should focus.  
-    * It is often difficult to determine which objectives one should focus.  
-        * Teams often trade objectives one opposite sides of the map.  
-        * The data analysis can help us determine which objective gives us the higher chance of winning.  
-    * From our visual representation we can see that from highest to lowest chance of winnings the objectives are:  
-        * first Inhibitor  
-        * first Baron  
-        * first Tower  
-        * first Dragon  
-        * first Blood  
-    * first inhibitor and first baron having the highest win percentage makes sense  
-        * They are lategame objectives, usually take after multiple kills, dragons, and towers.  
-        * By the time either team takes a baron or an inhibitor one team is usually clearly ahead.  
-            * This a causation vs correlation problem.  
-            * Taking baron or an inhibitor helps a team win, but the team was able to take that objective in the first place because they were already winning.  
-        * However, we can still gain an insight into how we play the game.  
-            * Inhibitors and barons are usually taken around the same time in the game.  
-            * If we are in a situation where we are even with the enemy team, then it may be smarter to trade objectives.  
-            * Taking inhibitor and letting the enemy team take dragon may be worthwhile.  
-            * However, this result must be taken extremely cautiously.  
-            * A team may only have been able to take the first inhibitor because they had baron or vice-versa.  
-            * A deeper data analyis taking this into account must be done to clearly determine which is a higher priority.  
-    * first Tower, Dragon, and Blood are more interesting as they are early game objectives (first 10 minutes).  
-        * For a long time I had believed that first dragon should be much higher priority than first tower.  
-            * Top laners can often choose to teleport to dragon to help the team secure the objective or they can choose to stay in lane and push for first tower while the enemy team takes dragon.  
+  * The following objectives (first blood, first tower, first dragon, first baron, first inhibitor) are crucial in determining who wins the game, as they are often linked with rewards that give the team that takes the objective an advantage.  
+    * For example, first blood and first tower grant an extra amount of gold, which when converted to items gives your team a power advantage, which can then be used to gain more kills and objectives.  
+  * In this analysis only first objectives were looked at, as objectives such as second dragons are much easier to obtain once you have secured the objective the first time around (term: snowballing).  
+  * It is often difficult to determine which objectives one should focus.  
+  * It is often difficult to determine which objectives one should focus.  
+    * Teams often trade objectives one opposite sides of the map.  
+    * The data analysis can help us determine which objective gives us the higher chance of winning.  
+  * From our visual representation we can see that from highest to lowest chance of winnings the objectives are:  
+    * first Inhibitor  
+    * first Baron  
+    * first Tower  
+    * first Dragon  
+    * first Blood  
+  * first inhibitor and first baron having the highest win percentage makes sense  
+    * They are lategame objectives, usually take after multiple kills, dragons, and towers.  
+    * By the time either team takes a baron or an inhibitor one team is usually clearly ahead.  
+      * This a causation vs correlation problem.  
+      * Taking baron or an inhibitor helps a team win, but the team was able to take that objective in the first place because they were already winning.  
+    * However, we can still gain an insight into how we play the game.  
+      * Inhibitors and barons are usually taken around the same time in the game.  
+      * If we are in a situation where we are even with the enemy team, then it may be smarter to trade objectives.  
+      * Taking inhibitor and letting the enemy team take dragon may be worthwhile.  
+      * However, this result must be taken extremely cautiously.  
+      * A team may only have been able to take the first inhibitor because they had baron or vice-versa.  
+      * A deeper data analyis taking this into account must be done to clearly determine which is a higher priority.  
+  * first Tower, Dragon, and Blood are more interesting as they are early game objectives (first 10 minutes).  
+  * For a long time I had believed that first dragon should be much higher priority than first tower.  
+  * Top laners can often choose to teleport to dragon to help the team secure the objective or they can choose to stay in lane and push for first tower while the enemy team takes dragon.  
             * As a top laner myself this data analysis is highly useful and eye-opening.  
             * It seems first tower leads to significantly more games won than first dragon.  
             * Some intuitive reasoning is:  

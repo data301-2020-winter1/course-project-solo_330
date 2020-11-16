@@ -14,15 +14,15 @@ Loads and processes the raw data set from 'lolchallengertotal.csv' into a datafr
 
 The data is loaded using the load_and_process function from 'scripts/python_functions.py' in order to:  
   *  Combine mutually exclusive (binary) columns into a single more informative column.  
-        * For example, the binary columns 'blueWin' and 'redWin' can be condensed into a single more informative categorical column.  
-        * As only a single team can win, it makes more sense to have a column called 'winner' with the value being 'blue' or 'red'.  
-    * Drop the original binary columns which are no longer needed.  
-    * Rename columns to be more consistent and clear, and to fix spelling and capitalization mistakes.  
-    * Order columns in a more appropriate, intuitive, and useful way.  
-    * Change the time from seconds to MM:SS and create a column for game length.  
-        * This is important as game length can vastly impact the outcome of the game and what variables are more important.
-        * For example, for long games (>40 mins) the gold difference becomes obsolete (as both team have enough gold for full items, even if one team has a large gold advantage).  
-    * Remove 'remakes' (games where a player failed to connnect, so the game is stopped with no winner or loser after 3 minutes). 
+    * For example, the binary columns 'blueWin' and 'redWin' can be condensed into a single more informative categorical column.  
+    * As only a single team can win, it makes more sense to have a column called 'winner' with the value being 'blue' or 'red'.  
+  * Drop the original binary columns which are no longer needed.  
+  * Rename columns to be more consistent and clear, and to fix spelling and capitalization mistakes.  
+  * Order columns in a more appropriate, intuitive, and useful way.  
+  * Change the time from seconds to MM:SS and create a column for game length.  
+    * This is important as game length can vastly impact the outcome of the game and what variables are more important.
+    * For example, for long games (>40 mins) the gold difference becomes obsolete (as both team have enough gold for full items, even if one team has a large gold advantage).  
+  * Remove 'remakes' (games where a player failed to connnect, so the game is stopped with no winner or loser after 3 minutes). 
 
 ### Research Questions: 
 

@@ -4,8 +4,9 @@ import datetime
 import time
 #import pdb
 import numpy as np
-#import matplotlib.pyplot as plt
-#import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas_profiling
 
 def blue_or_red(dataframe, variable):
     df = dataframe
@@ -22,13 +23,14 @@ def load_and_process(url_or_path_to_csv_file):
         print("There are {} NaN values in the dataset.".format(count_nan))
     
     df['winner'] = np.where(df['blueWins'] == 1, 'blue', (np.where(df['gameDuraton'] > 250, 'red', 'remake')))
-    df = blue_or_red(df, 'Blood')
-    df = blue_or_red(df, 'Tower')
-    df = blue_or_red(df, 'Baron')
-    df = blue_or_red(df, 'Dragon')
-    df = blue_or_red(df, 'Inhibitor')
+    
+    objectives = ['Blood', 'Tower', 'Baron', 'Dragon', 'Inhibitor']
+    for objective in objectives:
+        blue_or_red(df, objective)
+
     df['gameLength'] = np.where(df['gameDuraton'] > 2400, 'long',
                                (np.where(df['gameDuraton'] > 1200, 'medium', 'short')))
+    
     df['gameTime'] = df['gameDuraton'].apply(lambda x: time.strftime("%M:%S",time.gmtime(x)))
     
     df = (df.drop(columns = ['blueWins', 

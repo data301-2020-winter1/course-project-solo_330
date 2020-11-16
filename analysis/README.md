@@ -13,7 +13,7 @@ Contains the three raw data sets loaded into dataframes in Python.
 Loads and processes the raw data set from 'lolchallengertotal.csv' into a dataframe called 'loldata' in Python.
 
 The data is loaded using the load_and_process function from 'scripts/python_functions.py' in order to:  
-  *  Combine mutually exclusive (binary) columns into a single more informative column.  
+  * Combine mutually exclusive (binary) columns into a single more informative column.  
     * For example, the binary columns 'blueWin' and 'redWin' can be condensed into a single more informative categorical column.  
     * As only a single team can win, it makes more sense to have a column called 'winner' with the value being 'blue' or 'red'.  
   * Drop the original binary columns which are no longer needed.  
@@ -83,20 +83,20 @@ Calculated the percent of games won after taking the first of a specific objecti
   * first Tower, Dragon, and Blood are more interesting as they are early game objectives (first 10 minutes).  
   * For a long time I had believed that first dragon should be much higher priority than first tower.  
   * Top laners can often choose to teleport to dragon to help the team secure the objective or they can choose to stay in lane and push for first tower while the enemy team takes dragon.  
-            * As a top laner myself this data analysis is highly useful and eye-opening.  
-            * It seems first tower leads to significantly more games won than first dragon.  
-            * Some intuitive reasoning is:  
-                * When taking first dragon the whole team receives a buff, however, that buff is very small.  
-                * First dragon gives an advantage, but not big enough to where the advantage cannot be made up through farming minions or getting a kill.  
-                * First tower gives an advantage to only one or two players, but the advantage is much greater.  
-                * The player who gets first tower could receive anywhere between 450 - 800 gold depending on how fast they take the tower.  
-                * This is a large enough advantage where the receiver of the first turret gold can snowball their lane.  
-                * This advantage is often enough to decide a game it seems.  
-                * Overall, the gold worth of dragon and first tower are very similar.  
-                    * But in the latter case the 'gold' is spread amongst less players, given those players a bigger advantage.  
-        * First blood is not very interesting as a variable as it is dependant on outplay potential and often hard to trade objectives on.  
-            * The standard approach already is to push out lane and take towers when the enemy are collapsing to secure a first blood.  
-            * This follows what we have discovered in our data analysis.  
+    * As a top laner myself this data analysis is highly useful and eye-opening.  
+      * It seems first tower leads to significantly more games won than first dragon.  
+        * Some intuitive reasoning is:  
+          * When taking first dragon the whole team receives a buff, however, that buff is very small.  
+          * First dragon gives an advantage, but not big enough to where the advantage cannot be made up through farming minions or getting a kill.  
+          * First tower gives an advantage to only one or two players, but the advantage is much greater.  
+          * The player who gets first tower could receive anywhere between 450 - 800 gold depending on how fast they take the tower.  
+          * This is a large enough advantage where the receiver of the first turret gold can snowball their lane.  
+          * This advantage is often enough to decide a game it seems.  
+          * Overall, the gold worth of dragon and first tower are very similar.  
+            * But in the latter case the 'gold' is spread amongst less players, given those players a bigger advantage.  
+      * First blood is not very interesting as a variable as it is dependant on outplay potential and often hard to trade objectives on.  
+        * The standard approach already is to push out lane and take towers when the enemy are collapsing to secure a first blood.  
+        * This follows what we have discovered in our data analysis.  
 
 Calculated the correlation between all variables:  
     * The variables with the highest correlation with winning are:  

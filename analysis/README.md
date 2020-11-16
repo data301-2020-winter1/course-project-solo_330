@@ -99,29 +99,29 @@ Calculated the percent of games won after taking the first of a specific objecti
     * This follows what we have discovered in our data analysis.  
 
 Calculated the correlation between all variables:  
-    * The variables with the highest correlation with winning are:  
-        * blueWin  
-            * blueFirstTower             0.45  
-            * blueFirstInhibitor         0.64  
-            * blueDragonKills            0.47  
-            * blueTowerKills             0.71  
-            * blueInhibitorKills         0.55  
-            * blueKills (redDeaths)      0.45  
-            * blueObjectDamageDealt      0.53  
-            * redFirstTower             -0.45  
-            * redFirstInhibitor         -0.62  
-            * redDragonKills            -0.47  
-            * redTowerKills             -0.71  
-            * redInhibitorKills         -0.55  
-            * redObjectDamageDealt      -0.55  
-    * These all make sense and follow our above analysis for firstTower and firstInhibitor.  
-    * The same points about causation and correlation as well as snowballing can be applied to:  
-        * dragon kills  
-        * tower kills  
-        * inhibitor kills  
-        * objective damage  
-    * More analysis would have to be done taking into account the complex mechanisms between variables (most are not independent).  
-        * For example, having two dragons will make it easier to pick up the third dragon and win the game.  
+  * The variables with the highest correlation with winning are:  
+    * blueWin  
+      * blueFirstTower             0.45  
+      * blueFirstInhibitor         0.64  
+      * blueDragonKills            0.47  
+      * blueTowerKills             0.71  
+      * blueInhibitorKills         0.55  
+      * blueKills (redDeaths)      0.45  
+      * blueObjectDamageDealt      0.53  
+      * redFirstTower             -0.45  
+      * redFirstInhibitor         -0.62  
+      * redDragonKills            -0.47  
+      * redTowerKills             -0.71  
+      * redInhibitorKills         -0.55  
+      * redObjectDamageDealt      -0.55  
+  * These all make sense and follow our above analysis for firstTower and firstInhibitor.  
+  * The same points about causation and correlation as well as snowballing can be applied to:  
+    * dragon kills  
+    * tower kills  
+    * inhibitor kills  
+    * objective damage  
+  * More analysis would have to be done taking into account the complex mechanisms between variables (most are not independent).  
+    * For example, having two dragons will make it easier to pick up the third dragon and win the game.  
 
 #### Summary: 
         

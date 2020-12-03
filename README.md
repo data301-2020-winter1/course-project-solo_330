@@ -7,6 +7,10 @@
 
 Details for Milestone are available on Canvas (left sidebar, Course Project) or [here](https://firas.moosvi.com/courses/data301/project/milestone01.html).
 
+## Tableau Dashboard
+
+The tableau dashboard is the final work for this project and gives the user a chance to explore the data on their own, albeit with some restrictions and narrative guides such that they can reach meaningful conclusions by themselves. Users should have a better understanding of what objectives are more important after using the dashboard. 
+
 ## Describe your topic/interest in about 150-200 words
 
 League of Legends is a free multiplayer online battle arena video game played by millions of people worldwide. As a player myself I hope tshat the analysis of high-elo game data from Korea, data from the best players in the world, can help me understand what in-game factors are the most important, in order to help me improve my own gameplay. I am interested in this data analysis as I have been playing League of Legends for over six years. Over that time, I have improved and ranked up significantly, but have now hit the high-elo barrier. I wish to figure out which objectives are the most important and what early-game events lead to winning in high-elo.
